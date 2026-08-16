@@ -103,4 +103,4 @@ dsh plugin inject /path/to/dsh-vision-bridge
 
 ## 协议
 
-[BSD-3-Clause](./LICENSE)
+[MIT](./LICENSE)

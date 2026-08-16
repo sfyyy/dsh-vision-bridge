@@ -20,7 +20,7 @@
     "text-only-llm",
     "on-demand-vision"
   ],
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "author": "sfyyy",
   "repository": {
     "type": "git",
