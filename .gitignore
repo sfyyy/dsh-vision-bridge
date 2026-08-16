@@ -1,0 +1,13 @@
+node_modules/
+*.tsbuildinfo
+*.tgz
+.DS_Store
+
+# Internal development tooling (not part of the public plugin source)
+.trellis/
+.opencode/
+
+# Local vision-test sample images (not part of the plugin source)
+deepseek-logo*.svg
+deepseek-logo*.png
+gui_screenshot.png
