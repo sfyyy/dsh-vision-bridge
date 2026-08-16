@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-external/dsh-vision-bridge",
+  "name": "@dsh-extensions/dsh-vision-bridge",
   "version": "0.0.1",
   "description": "On-demand vision for text-only DSH sessions: images become markers, and a vision_describe tool sends only image + question to an OpenAI-compatible vision model",
   "type": "module",
