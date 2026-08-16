@@ -2,13 +2,34 @@
 
 > 让 DSH 的纯文本 DeepSeek 会话获得**按需多模态能力**。
 
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/TypeScript-typings-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![npm version](https://img.shields.io/npm/v/@dsh-extension/dsh-vision-bridge.svg?logo=npm&color=cb3837)](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
+[![npm downloads](https://img.shields.io/npm/dm/@dsh-extension/dsh-vision-bridge.svg?color=cb3837)](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
+[![GitHub stars](https://img.shields.io/github/stars/sfyyy/dsh-vision-bridge.svg)](https://github.com/sfyyy/dsh-vision-bridge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4B6BFE.svg)](https://www.npmjs.com/package/@deepseek-ai/dsh)
+
 [English](./README.md) · [npm](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
 
-一个 DSH 插件：会话全程停留在文本模型上，只有当模型真正需要看图时，才通过 `vision_describe` 工具把「图片 + 问题」交给 OpenAI 兼容的视觉模型处理。
+一个 DSH 插件：会话全程停留在文本模型上，只有当模型真正需要看图时——截图、上传的图片、流程图、图表——才通过 `vision_describe` 工具把「图片 + 问题」交给 OpenAI 兼容的视觉模型处理。
 
 - **长上下文永远不会发给视觉模型** —— 30 万 token 的会话历史绝不发送，每次视觉调用只有「图 + 问题」，成本最低。
 - **会话日志与界面保留原图** —— 只有模型*输入*被改写为文本标记。
 - **自带视觉端点** —— 任何 OpenAI 兼容的 `/v1/chat/completions` 服务（OpenAI、DeepSeek、Gemini 代理、本地 vLLM/One-API…）都可用。
+
+## ❤️ 赞助商
+
+> [想出现在这里吗？](mailto:sfyyy@users.noreply.github.com) —— 以 API 捐赠的方式赞助本项目。
+
+<table>
+
+<tr>
+<td width="180"><a href="https://api.xiaoyaoapi.cc/"><img src="https://api.xiaoyaoapi.cc/logo.png" alt="xiaoyaoapi" width="150"></a></td>
+<td>🎉 感谢 <a href="https://api.xiaoyaoapi.cc/">xiaoyaoapi</a> 为本项目捐赠 API！xiaoyaoapi 是一个面向开发者的 OpenAI 兼容 AI API 聚合网关，基于 New API 构建，提供统一管理后台。它支持统一密钥管理、透明用量统计，并在单一端点下聚合多个主流大模型渠道——让开发者以更低成本、更便捷的方式接入领先的大模型服务，可直接作为本插件的视觉端点使用。</td>
+</tr>
+
+</table>
 
 ## 工作原理
 
@@ -62,7 +83,7 @@ npx @deepseek-ai/dsh@0.1.0-rc.6 plugin --profile web add @dsh-extension/dsh-visi
   "baseUrl": "https://api.openai.com/v1",
   "apiKey": "sk-xxxx",
   "apiKeyEnv": "",
-  "model": "gpt-4o-mini"
+  "model": "gpt-5.6-terra"
 }
 ```
 
@@ -100,6 +121,10 @@ npm test
 ```sh
 dsh plugin inject /path/to/dsh-vision-bridge
 ```
+
+## 搜索关键词
+
+`deepseek` · `deepseek-harness` · `dsh` · `plugin` · `vision` · `multimodal` · `vision-language-model` · `VLM` · `image understanding` · `screenshot` · `OCR` · `image analysis` · `OpenAI-compatible` · `text-only-llm` · `on-demand vision` · `LLM agent`
 
 ## 协议
 

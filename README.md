@@ -2,13 +2,34 @@
 
 > On-demand vision for text-only DeepSeek Harness (DSH) sessions.
 
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/TypeScript-typings-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![npm version](https://img.shields.io/npm/v/@dsh-extension/dsh-vision-bridge.svg?logo=npm&color=cb3837)](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
+[![npm downloads](https://img.shields.io/npm/dm/@dsh-extension/dsh-vision-bridge.svg?color=cb3837)](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
+[![GitHub stars](https://img.shields.io/github/stars/sfyyy/dsh-vision-bridge.svg)](https://github.com/sfyyy/dsh-vision-bridge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4B6BFE.svg)](https://www.npmjs.com/package/@deepseek-ai/dsh)
+
 [中文文档](./README.zh-CN.md) · [npm](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
 
-A DSH plugin that gives a **text-only DeepSeek session on-demand multimodal capability**: the session stays on its text model for every turn, and only when the model actually needs to look at pixels does it call the `vision_describe` tool, which sends **only the image(s) + a focused question** to an OpenAI-compatible vision model.
+A DSH plugin that gives a **text-only DeepSeek session on-demand multimodal capability**: the session stays on its text model for every turn, and only when the model actually needs to look at pixels — a screenshot, an uploaded image, a diagram, a chart — does it call the `vision_describe` tool, which sends **only the image(s) + a focused question** to an OpenAI-compatible vision model.
 
 - **No long context ever reaches the vision model** — a 300k-token conversation history is never sent; each vision call is just image + question, keeping cost minimal.
 - **Session log and UI keep the original images** — only the model *input* is rewritten to text markers.
 - **Bring your own vision endpoint** — any OpenAI-compatible `/v1/chat/completions` service (OpenAI, DeepSeek, Gemini proxy, local vLLM/One-API, …).
+
+## ❤️ Sponsors
+
+> [Want to appear here?](mailto:sfyyy@users.noreply.github.com) — sponsor this project with an API donation.
+
+<table>
+
+<tr>
+<td width="180"><a href="https://api.xiaoyaoapi.cc/"><img src="https://api.xiaoyaoapi.cc/logo.png" alt="xiaoyaoapi" width="150"></a></td>
+<td>🎉 Thanks to <a href="https://api.xiaoyaoapi.cc/">xiaoyaoapi</a> for donating their API to this project! xiaoyaoapi is an OpenAI-compatible AI API aggregation gateway for developers, built on New API with a unified admin dashboard. It offers unified key management, transparent usage tracking, and multi-channel access to mainstream large models under a single endpoint — letting developers integrate leading LLM services at lower cost and with greater convenience, ready to use as the vision endpoint of this plugin.</td>
+</tr>
+
+</table>
 
 ## How it works
 
@@ -64,7 +85,7 @@ Configure it in **Settings → Vision Bridge** (DSH Web), or edit `~/.dsh/vision
   "baseUrl": "https://api.openai.com/v1",
   "apiKey": "sk-xxxx",
   "apiKeyEnv": "",
-  "model": "gpt-4o-mini"
+  "model": "gpt-5.6-terra"
 }
 ```
 
@@ -102,6 +123,10 @@ From a local checkout:
 ```sh
 dsh plugin inject /path/to/dsh-vision-bridge
 ```
+
+## Search keywords
+
+`deepseek` · `deepseek-harness` · `dsh` · `plugin` · `vision` · `multimodal` · `vision-language-model` · `VLM` · `image understanding` · `screenshot` · `OCR` · `image analysis` · `OpenAI-compatible` · `text-only-llm` · `on-demand vision` · `LLM agent`
 
 ## License
 
