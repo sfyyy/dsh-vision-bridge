@@ -1,8 +1,8 @@
-# @dsh-extensions/dsh-vision-bridge
+# @dsh-extension/dsh-vision-bridge
 
 > On-demand vision for text-only DeepSeek Harness (DSH) sessions.
 
-[中文文档](./README.zh-CN.md) · [npm](https://www.npmjs.com/package/@dsh-extensions/dsh-vision-bridge)
+[中文文档](./README.zh-CN.md) · [npm](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
 
 A DSH plugin that gives a **text-only DeepSeek session on-demand multimodal capability**: the session stays on its text model for every turn, and only when the model actually needs to look at pixels does it call the `vision_describe` tool, which sends **only the image(s) + a focused question** to an OpenAI-compatible vision model.
 
@@ -44,10 +44,10 @@ Install from the npm registry (not a local checkout) — one command:
 
 ```sh
 # if you already have the `dsh` CLI on PATH:
-dsh plugin --profile web add @dsh-extensions/dsh-vision-bridge
+dsh plugin --profile web add @dsh-extension/dsh-vision-bridge
 
 # or, if you have been using npx all along:
-npx @deepseek-ai/dsh@0.1.0-rc.6 plugin --profile web add @dsh-extensions/dsh-vision-bridge
+npx @deepseek-ai/dsh@0.1.0-rc.6 plugin --profile web add @dsh-extension/dsh-vision-bridge
 ```
 
 > The `--profile` flag targets the profile you boot (`web` is the browser UI profile). Omit it or adapt it if your profile has a different name.

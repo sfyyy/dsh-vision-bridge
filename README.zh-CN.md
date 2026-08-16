@@ -1,8 +1,8 @@
-# @dsh-extensions/dsh-vision-bridge
+# @dsh-extension/dsh-vision-bridge
 
 > 让 DSH 的纯文本 DeepSeek 会话获得**按需多模态能力**。
 
-[English](./README.md) · [npm](https://www.npmjs.com/package/@dsh-extensions/dsh-vision-bridge)
+[English](./README.md) · [npm](https://www.npmjs.com/package/@dsh-extension/dsh-vision-bridge)
 
 一个 DSH 插件：会话全程停留在文本模型上，只有当模型真正需要看图时，才通过 `vision_describe` 工具把「图片 + 问题」交给 OpenAI 兼容的视觉模型处理。
 
@@ -42,10 +42,10 @@ DSH Web 会在消息进入 agent 前根据当前 DeepSeek 模型执行图片能�
 
 ```sh
 # 如果你的终端里已经有 dsh 命令：
-dsh plugin --profile web add @dsh-extensions/dsh-vision-bridge
+dsh plugin --profile web add @dsh-extension/dsh-vision-bridge
 
 # 或者你一直使用 npx，可以写成：
-npx @deepseek-ai/dsh@0.1.0-rc.6 plugin --profile web add @dsh-extensions/dsh-vision-bridge
+npx @deepseek-ai/dsh@0.1.0-rc.6 plugin --profile web add @dsh-extension/dsh-vision-bridge
 ```
 
 > `--profile` 指定你要启动的 profile（`web` 即浏览器 UI profile）；如果你的 profile 名字不同，请相应调整或省略。
