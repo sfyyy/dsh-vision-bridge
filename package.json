@@ -24,12 +24,12 @@
   "author": "sfyyy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<GITHUB_USER>/dsh-vision-bridge.git"
+    "url": "git+https://github.com/sfyyy/dsh-vision-bridge.git"
   },
   "bugs": {
-    "url": "https://github.com/<GITHUB_USER>/dsh-vision-bridge/issues"
+    "url": "https://github.com/sfyyy/dsh-vision-bridge/issues"
   },
-  "homepage": "https://github.com/<GITHUB_USER>/dsh-vision-bridge#readme",
+  "homepage": "https://github.com/sfyyy/dsh-vision-bridge#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
